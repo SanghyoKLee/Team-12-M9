@@ -34,8 +34,8 @@ const Review = ({ review, onPress, onBookmark }) => {
   };
 
   const handleBookmark = () => {
-    setBookmarked(!bookmarked); 
-    onBookmark({ ...review, bookmarked: !bookmarked }); 
+    setBookmarked(!bookmarked);
+    onBookmark({ ...review, bookmarked: !bookmarked });
   };
 
   return (
@@ -74,12 +74,12 @@ const Review = ({ review, onPress, onBookmark }) => {
           </Pressable>
           <Text style={styles.likeCount}>{likes}</Text>
           <Pressable onPress={handleBookmark} style={styles.actionButton}>
-          <Ionicons
-            name={bookmarked ? "bookmark" : "bookmark-outline"} 
-            size={24}
-            color={bookmarked ? "black" : "black"} 
-          />
-        </Pressable>
+            <Ionicons
+              name={bookmarked ? "bookmark" : "bookmark-outline"}
+              size={24}
+              color={bookmarked ? "black" : "black"}
+            />
+          </Pressable>
         </View>
       </View>
     </Pressable>
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 1,
   },
-  bookmark:{
+  bookmark: {
     marginRight: 10,
   },
   picturesContainer: {},

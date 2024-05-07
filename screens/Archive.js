@@ -1,9 +1,16 @@
 import React, { useState } from "react";
-import { View, Text, FlatList, StyleSheet, ImageBackground, TouchableOpacity, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  StyleSheet,
+  ImageBackground,
+  TouchableOpacity,
+  TextInput,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const Archive = ({ route }) => {
   const { bookmarkedPosts } = route.params;
@@ -49,7 +56,11 @@ const Archive = ({ route }) => {
               <TouchableOpacity onPress={() => navigateToFocusedItem(item)}>
                 <View style={styles.postContainer}>
                   <ImageBackground
-                    source={item.pictures[0] ? { uri: item.pictures[0] } : require("../assets/images/book.jpg")}
+                    source={
+                      item.pictures[0]
+                        ? { uri: item.pictures[0] }
+                        : require("../assets/images/book.jpg")
+                    }
                     style={styles.picture}
                   >
                     <View style={styles.bottomHalf} />
@@ -75,13 +86,13 @@ const styles = StyleSheet.create({
   headerContainer: {
     marginBottom: 20,
     paddingTop: 50,
-    paddingBottom:20,
+    paddingBottom: 20,
     backgroundColor: "#C1121F",
     paddingHorizontal: 10,
   },
   heading: {
     fontSize: 20,
-    paddingBottom:20,
+    paddingBottom: 20,
     fontWeight: "bold",
     color: "white",
   },
@@ -106,7 +117,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "white",
     paddingHorizontal: 20,
-
   },
   flatListContent: {
     alignItems: "center",
@@ -131,7 +141,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 12,
     color: "black",
-    bottom:30,
+    bottom: 30,
     textAlign: "center",
   },
   picture: {
